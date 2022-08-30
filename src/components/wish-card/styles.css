@@ -8,18 +8,22 @@
 }
 
 .wishImage {
-  border-radius: 10px;
   margin-bottom: 32px;
   max-width: 100%;
 }
 
-.wishTitle {
-  font-size: 36px;
-  font-weight: 900;
-  margin-bottom: 12px;
+.oval {
+  border-radius: 400px;
 }
 
-.wishDescription {
-  font-size: 18px;
-  font-weight: 100;
+.rectangleWithRadius {
+  border-radius: 40px;
+}
+
+.rectangle {
+  box-sizing: border-box;
+}
+.halfRectangle {
+  border-bottom-left-radius: 200px;
+  border-top-right-radius: 200px;
 }
