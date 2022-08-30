@@ -1,0 +1,12 @@
+@import "../../css/typography.css";
+@import "../../css/variables.css";
+
+body {
+  font-family: "HalvarBreitschrift", sans-serif;
+  font-weight: 500;
+}
+
+.main {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}

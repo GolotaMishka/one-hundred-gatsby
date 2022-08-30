@@ -1,0 +1,25 @@
+.card {
+  width: calc(var(--container-width) / var(--columns-amount) * 4);
+}
+
+.card:nth-child(4n + 1),
+.card:nth-child(4n) {
+  width: calc(var(--container-width) / var(--columns-amount) * 7);
+}
+
+.wishImage {
+  border-radius: 10px;
+  margin-bottom: 32px;
+  max-width: 100%;
+}
+
+.wishTitle {
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.wishDescription {
+  font-size: 18px;
+  font-weight: 100;
+}

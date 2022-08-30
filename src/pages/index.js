@@ -1,86 +1,43 @@
 import * as React from "react";
-
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-};
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-};
-const headingAccentStyles = {
-  color: "#663399",
-};
-
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-};
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-};
-
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-};
-
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
-};
-
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-};
-
-// const badgeStyle = {
-//   color: "#fff",
-//   backgroundColor: "#088413",
-//   border: "1px solid #088413",
-//   fontSize: 11,
-//   fontWeight: "bold",
-//   letterSpacing: 1,
-//   borderRadius: 4,
-//   padding: "4px 6px",
-//   display: "inline-block",
-//   position: "relative",
-//   top: -2,
-//   marginLeft: 10,
-//   lineHeight: 1,
-// };
+import { Layout, WishCard } from "../components";
+import "./styles.css";
 
 const wishes = [
   {
-    text: "Jump down with a parachute",
+    title: "Jump down with a parachute",
     description: "Jump from over then 4000 meters",
     color: "#E95800",
   },
   {
-    text: "Get a private pilot license",
+    title: "Get a private pilot license",
     description:
       "Become a private pilot to be an able to fly on the personal plane",
     color: "#1099A8",
   },
   {
-    text: "Learn Surfing",
+    title: "Learn Surfing",
     description: "Learn How To Surf",
     color: "#BC027F",
   },
   {
-    text: "To Live for 3 months on the Bali",
+    title: "To Live for 3 months on the Bali",
+    description:
+      "Spend a winter on the hot beaches of some tropical countries like Bali",
+    color: "#0D96F2",
+  },
+  {
+    title: "Get a private pilot license",
+    description:
+      "Become a private pilot to be an able to fly on the personal plane",
+    color: "#1099A8",
+  },
+  {
+    title: "Learn Surfing",
+    description: "Learn How To Surf",
+    color: "#BC027F",
+  },
+  {
+    title: "To Live for 3 months on the Bali",
     description:
       "Spend a winter on the hot beaches of some tropical countries like Bali",
     color: "#0D96F2",
@@ -89,34 +46,29 @@ const wishes = [
 
 const IndexPage = () => {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>
-          — you on the Mishka's website! 🎉🎉🎉
-        </span>
-      </h1>
-
-      <ul style={listStyles}>
-        {wishes.map((wishe) => (
-          <li
-            key={wishe.title}
-            style={{ ...listItemStyles, color: wishe.color }}
-          >
-            <span>
-              <p style={linkStyle}>{wishe.text}</p>
-              {/* {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )} */}
-              <p style={descriptionStyle}>{wishe.description}</p>
-            </span>
-          </li>
+    <Layout>
+      <section id="about" className="about">
+        <h1 className="title">1000 dreams project</h1>
+        <p className="description">
+          My name is Mishka and i’m hot boy, who want to take all from this
+          life. So, My name is Mishka and i’m hot boy, who want to take all from
+          this life. So, My name is Mishka and i’m hot boy, who want to take all
+          from this life. So, My name is Mishka and i’m hot boy, who want to
+          take all from this life. So, My name is Mishka and i’m hot boy, who
+          want to take all from this life. So, My name is Mishka and i’m hot
+          boy, who want to take all from this life. So,{" "}
+        </p>
+      </section>
+      <section id="wishes" className="wishes">
+        {wishes.map((wish) => (
+          <WishCard
+            key={wish.title}
+            title={wish.title}
+            description={wish.description}
+          />
         ))}
-      </ul>
-    </main>
+      </section>
+    </Layout>
   );
 };
 

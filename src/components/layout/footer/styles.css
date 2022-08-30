@@ -1,0 +1,26 @@
+.footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-top: 1px solid black;
+  padding: 40px 0;
+}
+
+.socialTitle {
+  text-transform: uppercase;
+  font-weight: 100;
+}
+.links {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 40px;
+}
+.socialLink {
+  color: #131415;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.socialLogo {
+  max-width: 40px;
+}
