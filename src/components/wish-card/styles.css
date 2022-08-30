@@ -7,11 +7,22 @@
   width: calc(var(--container-width) / var(--columns-amount) * 7);
 }
 
-.wishImage {
-  margin-bottom: 32px;
-  max-width: 100%;
+.wishDescription {
+  color: var(--font-secondary);
+  font-weight: 100;
 }
 
+.wishImage {
+  margin-bottom: 32px;
+  width: 100%;
+  filter: grayscale(100%);
+}
+
+.wishImage:hover {
+  transform: scale(1.05);
+  transition: all 0.5s linear;
+  filter: none;
+}
 .oval {
   border-radius: 400px;
 }
@@ -23,6 +34,7 @@
 .rectangle {
   box-sizing: border-box;
 }
+
 .halfRectangle {
   border-bottom-left-radius: 200px;
   border-top-right-radius: 200px;

@@ -1,9 +1,9 @@
-@import "../../css/typography.css";
 @import "../../css/variables.css";
 
 body {
-  font-family: "HalvarBreitschrift", sans-serif;
-  font-weight: 500;
+  font-family: sans-serif;
+  font-weight: normal;
+  color: var(--font-primary);
 }
 
 .main {

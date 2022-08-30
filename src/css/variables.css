@@ -1,4 +1,6 @@
 :root {
   --container-width: 1300px;
   --columns-amount: 12;
+  --font-primary: #131415;
+  --font-secondary: #61646b;
 }
